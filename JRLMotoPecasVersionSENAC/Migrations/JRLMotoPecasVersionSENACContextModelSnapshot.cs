@@ -110,6 +110,8 @@ namespace JRLMotoPecasVersionSENAC.Migrations
 
                     b.Property<int>("Estoque");
 
+                    b.Property<byte[]>("Imagem");
+
                     b.Property<string>("Nome");
 
                     b.Property<double>("Preco");

@@ -14,14 +14,24 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="TotalVenda" class="control-label"></label>
-                <input asp-for="TotalVenda" class="form-control" />
-                <span asp-validation-for="TotalVenda" class="text-danger"></span>
+                <label asp-for="Numero" class="control-label"></label>
+                <input asp-for="Numero" class="form-control" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Data" class="control-label"></label>
-                <input asp-for="Data" class="form-control" />
-                <span asp-validation-for="Data" class="text-danger"></span>
+                <label asp-for="DataCompra" class="control-label"></label>
+                <input asp-for="DataCompra" class="form-control" />
+                <span asp-validation-for="DataCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalCompra" class="control-label"></label>
+                <input asp-for="TotalCompra" class="form-control" />
+                <span asp-validation-for="TotalCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoAtual" class="control-label"></label>
+                <input asp-for="EstadoAtual" class="form-control" />
+                <span asp-validation-for="EstadoAtual" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />

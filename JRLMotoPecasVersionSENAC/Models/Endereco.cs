@@ -9,32 +9,27 @@ namespace JRLMotoPecasVersionSENAC.Models
     {
 
         public int Id { get; set; }
+        public string Logradouro { get; set; }
+        public string Complemento { get; set; }
         public string Bairro { get; set; }
-        public string Rua { get; set; }
         public string CEP { get; set; }
         public string Cidade { get; set; }
-        public string Pais { get; set; }
-        public string Complemento { get; set; }
         public string Estado { get; set; }
-        public int Numero { get; set; }
-
 
         public Endereco()
         {
 
         }
 
-        public Endereco(int id, string bairro, string rua, string cEP, string cidade, string pais, string complemente, string estado, int numero)
+        public Endereco(int id, string logradouro, string complemento, string bairro, string cEP, string cidade, string estado)
         {
             Id = id;
+            Logradouro = logradouro;
+            Complemento = complemento;
             Bairro = bairro;
-            Rua = rua;
             CEP = cEP;
             Cidade = cidade;
-            Pais = pais;
-            Complemento = complemente;
             Estado = estado;
-            Numero = numero;
         }
     }
 }

@@ -10,26 +10,30 @@ namespace JRLMotoPecasVersionSENAC.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public Categoria Categoria { get; set; }
-        public double Preco { get; set; }
+        public string Categoria { get; set; }
         public int Estoque { get; set; }
-        //public Imagem Imagem { get; set; }
-
+        public double Preco { get; set; }
+        public byte[] Imagem { get; set; }
+        public string Tamanho { get; set; }
+        public string Cor { get; set; }
+        public DateTime DataEntrada { get; set; }
 
         public Produto()
         {
-
+            DataEntrada = DateTime.Now;
         }
 
-        public Produto(int id, string nome, string descricao, Categoria categoria, double preco, int estoque)
+        public Produto(int id, string nome, string descricao, string categoria, int estoque, double preco, byte[] imagem, string tamanho, string cor)
         {
             Id = id;
             Nome = nome;
             Descricao = descricao;
             Categoria = categoria;
-            Preco = preco;
             Estoque = estoque;
-            //Imagem = imagem;
+            Preco = preco;
+            Imagem = imagem;
+            Tamanho = tamanho;
+            Cor = cor;
         }
     }
 }

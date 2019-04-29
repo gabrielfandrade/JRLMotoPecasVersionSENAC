@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using JRLMotoPecasVersionSENAC.Models;
+using Microsoft.AspNetCore.Http;
+using System.IO;
 
 namespace JRLMotoPecasVersionSENAC.Controllers
 {
@@ -52,11 +54,22 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Descricao,Categoria,Preco,Estoque")] Produto produto)
+        
+        public async Task<IActionResult> Create(Produto produto, List<IFormFile> Imagens)
         {
             if (ModelState.IsValid)
             {
+                foreach(var item in Imagens)
+                { 
+                    if (item.Length > 0)
+                    {
+                        using (var stream = new MemoryStream())
+                        {
+                            await item.CopyToAsync(stream);
+                            produto.Imagem = stream.ToArray();
+                        }
+                    }
+                }
                 _context.Add(produto);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -85,7 +98,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Descricao,Categoria,Preco,Estoque")] Produto produto)
+        public async Task<IActionResult> Edit(int id, Produto produto, List<IFormFile> Imagens)
         {
             if (id != produto.Id)
             {
@@ -96,6 +109,17 @@ namespace JRLMotoPecasVersionSENAC.Controllers
             {
                 try
                 {
+                    foreach (var item in Imagens)
+                    {
+                        if (item.Length > 0)
+                        {
+                            using (var stream = new MemoryStream())
+                            {
+                                await item.CopyToAsync(stream);
+                                produto.Imagem = stream.ToArray();
+                            }
+                        }
+                    }
                     _context.Update(produto);
                     await _context.SaveChangesAsync();
                 }

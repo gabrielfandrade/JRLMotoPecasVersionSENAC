@@ -48,22 +48,6 @@ namespace JRLMotoPecasVersionSENAC.Controllers
             return View();
         }
 
-        // POST: Vendas/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TotalVenda,Data")] Venda venda)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(venda);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(venda);
-        }
-
         // GET: Vendas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -85,7 +69,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,TotalVenda,Data")] Venda venda)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Numero,DataCompra,TotalCompra,EstadoAtual")] Venda venda)
         {
             if (id != venda.Id)
             {

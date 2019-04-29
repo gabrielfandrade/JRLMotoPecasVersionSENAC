@@ -46,9 +46,6 @@ namespace JRLMotoPecasVersionSENAC
             services.AddDbContext<JRLMotoPecasVersionSENACContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("JRLMotoPecasVersionSENACContext")));
 
-            services.AddDbContext<ImagemDbContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("ImagemContext")));
-            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
