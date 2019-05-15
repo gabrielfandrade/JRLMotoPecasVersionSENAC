@@ -11,7 +11,7 @@ namespace JRLMotoPecasVersionSENAC.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public DateTime DataNascimento { get; set; }
+        public DateTime DataDeNascimento { get; set; }
         public string CPF { get; set; }
         public string RG { get; set; }
         public string Email { get; set; }
@@ -23,12 +23,12 @@ namespace JRLMotoPecasVersionSENAC.Models
         {
         }
 
-        public Funcionario(int id, string nome, string sobrenome, DateTime dataNascimento, string cPF, string rG, string email, string telefone, string celular, Endereco endereco)
+        public Funcionario(int id, string nome, string sobrenome, DateTime dataDeNascimento, string cPF, string rG, string email, string telefone, string celular, Endereco endereco)
         {
             Id = id;
             Nome = nome;
             Sobrenome = sobrenome;
-            DataNascimento = dataNascimento;
+            DataDeNascimento = dataDeNascimento;
             CPF = cPF;
             RG = rG;
             Email = email;
