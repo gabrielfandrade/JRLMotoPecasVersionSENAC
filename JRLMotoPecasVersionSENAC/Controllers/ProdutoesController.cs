@@ -55,21 +55,19 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         
-        public async Task<IActionResult> Create(Produto produto, List<IFormFile> Imagens)
+        public async Task<IActionResult> Create(Produto produto, IFormFile Imagem)
         {
             if (ModelState.IsValid)
-            {
-                foreach(var item in Imagens)
-                { 
-                    if (item.Length > 0)
+            { 
+                if (Imagem.Length > 0)
+                {
+                    using (var stream = new MemoryStream())
                     {
-                        using (var stream = new MemoryStream())
-                        {
-                            await item.CopyToAsync(stream);
-                            produto.Imagem = stream.ToArray();
-                        }
+                        await Imagem.CopyToAsync(stream);
+                        produto.Imagem = stream.ToArray();
                     }
                 }
+                produto.DataEntrada = DateTime.Now;
                 _context.Add(produto);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -98,7 +96,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Produto produto, List<IFormFile> Imagens)
+        public async Task<IActionResult> Edit(int id, Produto produto, IFormFile Imagem)
         {
             if (id != produto.Id)
             {
@@ -109,15 +107,12 @@ namespace JRLMotoPecasVersionSENAC.Controllers
             {
                 try
                 {
-                    foreach (var item in Imagens)
+                    if (Imagem.Length > 0)
                     {
-                        if (item.Length > 0)
+                        using (var stream = new MemoryStream())
                         {
-                            using (var stream = new MemoryStream())
-                            {
-                                await item.CopyToAsync(stream);
-                                produto.Imagem = stream.ToArray();
-                            }
+                            await Imagem.CopyToAsync(stream);
+                            produto.Imagem = stream.ToArray();
                         }
                     }
                     _context.Update(produto);

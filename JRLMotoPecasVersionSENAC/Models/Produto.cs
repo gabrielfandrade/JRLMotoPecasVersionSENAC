@@ -16,7 +16,7 @@ namespace JRLMotoPecasVersionSENAC.Models
         public byte[] Imagem { get; set; }
         public string Tamanho { get; set; }
         public string Cor { get; set; }
-        public DateTime DataEntrada { get; set; }
+        public DateTime? DataEntrada { get; set; }
 
         public Produto()
         {
