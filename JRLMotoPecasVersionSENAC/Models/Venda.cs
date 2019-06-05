@@ -12,23 +12,23 @@ namespace JRLMotoPecasVersionSENAC.Models
         public int Numero { get; set; }
         public Cliente Cliente { get; set; }
         public DateTime DataCompra { get; set; }
-        public Transportadora Transportadora { get; set; }
+        public Double ValorEntrega { get; set; }
         public Endereco Entrega { get; set; }
         public double TotalCompra { get; set; }
         public string EstadoAtual { get; set; }
-        public List<Produto> Produtos { get; set; }
+        public List<ItemVenda> Produtos { get; set; }
 
         public Venda()
         {
         }
 
-        public Venda(int id, int numero, Cliente cliente, DateTime dataCompra, Transportadora transportadora, Endereco entrega, double totalCompra, string estadoAtual, List<Produto> produtos)
+        public Venda(int id, int numero, Cliente cliente, DateTime dataCompra, double valorEntrega, Endereco entrega, double totalCompra, string estadoAtual, List<ItemVenda> produtos)
         {
             Id = id;
             Numero = numero;
             Cliente = cliente;
             DataCompra = dataCompra;
-            Transportadora = transportadora;
+            ValorEntrega = valorEntrega;
             Entrega = entrega;
             TotalCompra = totalCompra;
             EstadoAtual = estadoAtual;

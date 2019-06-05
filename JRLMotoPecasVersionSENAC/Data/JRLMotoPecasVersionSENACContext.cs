@@ -22,6 +22,6 @@ namespace JRLMotoPecasVersionSENAC.Models
 
         public DbSet<JRLMotoPecasVersionSENAC.Models.Venda> Venda { get; set; }
 
-        public DbSet<JRLMotoPecasVersionSENAC.Models.Transportadora> Transportadora { get; set; }
+        public DbSet<JRLMotoPecasVersionSENAC.Models.ItemVenda> ItemVenda { get; set; }
     }
 }

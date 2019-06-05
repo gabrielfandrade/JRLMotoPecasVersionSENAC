@@ -33,7 +33,6 @@ C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVer
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.dll
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.pdb
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.csproj.CopyComplete
-C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Clientes\Create.g.cshtml.cs
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Clientes\Delete.g.cshtml.cs
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Clientes\Details.g.cshtml.cs
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Clientes\Edit.g.cshtml.cs
@@ -48,16 +47,10 @@ C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVer
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Funcionarios\Details.g.cshtml.cs
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Funcionarios\Edit.g.cshtml.cs
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Funcionarios\Index.g.cshtml.cs
-C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Vendas\Create.g.cshtml.cs
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Vendas\Delete.g.cshtml.cs
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Vendas\Details.g.cshtml.cs
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Vendas\Edit.g.cshtml.cs
 C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Vendas\Index.g.cshtml.cs
-C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Transportadoras\Create.g.cshtml.cs
-C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Transportadoras\Delete.g.cshtml.cs
-C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Transportadoras\Details.g.cshtml.cs
-C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Transportadoras\Edit.g.cshtml.cs
-C:\Users\gabriel.fandrade3\source\repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Transportadoras\Index.g.cshtml.cs
 C:\Users\gabriel.fandrade3\Downloads\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\bin\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.deps.json
 C:\Users\gabriel.fandrade3\Downloads\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\bin\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.runtimeconfig.json
 C:\Users\gabriel.fandrade3\Downloads\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\bin\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.runtimeconfig.dev.json
@@ -297,3 +290,4 @@ C:\Users\Pichau\source\repos\JRLMotoPecasBack\JRLMotoPecasVersionSENAC\JRLMotoPe
 C:\Users\Pichau\source\repos\JRLMotoPecasBack\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Vendas\Details.g.cshtml.cs
 C:\Users\Pichau\source\repos\JRLMotoPecasBack\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Vendas\Edit.g.cshtml.cs
 C:\Users\Pichau\source\repos\JRLMotoPecasBack\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Vendas\Index.g.cshtml.cs
+C:\Users\gabriel.fandrade3\Source\Repos\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Relatorio\Relatorio.g.cshtml.cs

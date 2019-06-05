@@ -15,8 +15,8 @@ namespace JRLMotoPecasVersionSENAC.Models
         public string CPF { get; set; }
         public string RG { get; set; }
         public string Sexo { get; set; }
-        public DateTime DataDeNascimento { get; set; }
-        public Endereco Endereco { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public List<Endereco> Endereco { get; set; }
 
         public Cliente()
         {
@@ -24,7 +24,7 @@ namespace JRLMotoPecasVersionSENAC.Models
 
         }
 
-        public Cliente(int id, string nome, string sobrenome, string telefone, string cPF, string rG, string sexo, DateTime dataDeNascimento, Endereco endereco)
+        public Cliente(int id, string nome, string sobrenome, string telefone, string cPF, string rG, string sexo, DateTime dataNascimento, List<Endereco> endereco)
         {
             Id = id;
             Nome = nome;
@@ -33,7 +33,7 @@ namespace JRLMotoPecasVersionSENAC.Models
             CPF = cPF;
             RG = rG;
             Sexo = sexo;
-            DataDeNascimento = dataDeNascimento;
+            DataNascimento = dataNascimento;
             Endereco = endereco;
         }
     }
