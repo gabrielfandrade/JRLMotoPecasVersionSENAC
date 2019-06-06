@@ -50,7 +50,7 @@
                 <td>@Html.DisplayFor(modelItem => item.DataCompra)</td>
                 <td>@Html.DisplayFor(modelItem => item.TotalCompra)</td>
                 <td>@Html.DisplayFor(modelItem => item.EstadoAtual)</td>
-                <td><a asp-action="?" asp-route-id="@item.Id">Visualizar</a></td>
+                <td><a asp-action="Detalhes" asp-route-id="@item.Id">Visualizar</a></td>
             </tr>
         }
     </tbody>

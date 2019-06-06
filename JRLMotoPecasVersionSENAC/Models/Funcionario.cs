@@ -18,12 +18,19 @@ namespace JRLMotoPecasVersionSENAC.Models
         public string Telefone { get; set; }
         public string Celular { get; set; }
         public Endereco Endereco { get; set; }
+        public Perfils Perfil { get; set; }
+
+        public enum Perfils
+        {
+            Administrador,
+            Gerente,
+        }
 
         public Funcionario()
         {
         }
 
-        public Funcionario(int id, string nome, string sobrenome, DateTime dataNascimento, string cPF, string rG, string email, string telefone, string celular, Endereco endereco)
+        public Funcionario(int id, string nome, string sobrenome, DateTime dataNascimento, string cPF, string rG, string email, string telefone, string celular, Endereco endereco, Perfils perfil)
         {
             Id = id;
             Nome = nome;
@@ -35,6 +42,7 @@ namespace JRLMotoPecasVersionSENAC.Models
             Telefone = telefone;
             Celular = celular;
             Endereco = endereco;
+            Perfil = perfil;
         }
     }
 }
