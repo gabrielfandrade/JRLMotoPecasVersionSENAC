@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using JRLMotoPecasVersionSENAC.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace JRLMotoPecasVersionSENAC.Controllers
 {
@@ -17,20 +19,22 @@ namespace JRLMotoPecasVersionSENAC.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Relatorio()
+
+        public async Task<IActionResult> Relatorio(DateTime? dataInicial, DateTime? dataFinal)
         {
-            return View();
+            var result = await FindByDate(dataInicial,dataFinal);
+            return  View();
         }
+        /*
 
-
-        public ActionResult GerarRelatorio(DateTime dataInicial, DateTime dataFinal, int? pagina, Boolean? gerarPDF)
+        public async Task<List<Venda>>GerarRelatorio(DateTime dataInicial, DateTime dataFinal, int? pagina, Boolean? gerarPDF)
         {
-            List<Venda> Vendas = _context.Venda.Where(i => i.DataCompra >= dataInicial && i.DataCompra <= dataFinal).OrderBy(p => p.Id).ToList<Venda>();
+            Task<List<Venda>> Vendas = await _context.Venda.Where(i => i.DataCompra >= dataInicial && i.DataCompra <= dataFinal).OrderBy(p => p.DataCompra).ToListAsync<Venda>();
             
-            return View(Vendas);
-        }
-
-        public IActionResult Detalhes(int? id)
+            return await Vendas;
+        }*/
+        /*
+        public Task<List<ItemVenda>> Detalhes(int? id)
         {
             if (id == null)
             {
@@ -46,9 +50,31 @@ namespace JRLMotoPecasVersionSENAC.Controllers
             else
             {
                 venda.Produtos = _context.ItemVenda.Where(i => i.IdVenda.Id == venda.Id).ToList<ItemVenda>();
+                for (int i = 0; i<venda.Produtos.Count; i++)
+                {
+                    venda.Produtos[i].IdProduto = _context.Produto.Where(m => m.Id == venda.Produtos[i].IdProduto.Id);
+                }
             }
 
-            return View(venda);//
+            return View(venda);
+        }*/
+
+        public async Task<List<Venda>> FindByDate(DateTime? dataInicial, DateTime? dataFinal)
+        {
+            var result = from Venda in _context.Venda select Venda;
+
+            if (dataInicial.HasValue)
+            {
+                result = result.Where(x => x.DataCompra >= dataInicial.Value);
+            }
+            if (dataFinal.HasValue)
+            {
+                result = result.Where(x => x.DataCompra >= dataFinal.Value);
+            }
+
+
+            return await result.OrderByDescending(x => x.DataCompra).ToListAsync();
+
         }
 
     }

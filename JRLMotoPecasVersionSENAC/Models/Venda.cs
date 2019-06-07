@@ -34,5 +34,10 @@ namespace JRLMotoPecasVersionSENAC.Models
             EstadoAtual = estadoAtual;
             Produtos = produtos;
         }
+
+        public static implicit operator Venda(List<Venda> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
