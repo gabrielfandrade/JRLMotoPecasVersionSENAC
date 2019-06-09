@@ -10,7 +10,6 @@
     </div>
     <div class="panel-body">
         <form id="relatorio" class="form-horizontal" role="search">
-
             <div class="form-group">
                 <label for="dataInicial" class="col-sm-2 control-label">Data Inicial:</label>
                 <div class="col-sm-2">
@@ -42,6 +41,8 @@
     </thead>
 
     <tbody>
+        @if (Model != null)
+        {
         @foreach (var item in Model)
                 {
                     <tr>
@@ -53,5 +54,6 @@
                         <td></td>
                     </tr>
                 }
+        }
     </tbody>
 </table>

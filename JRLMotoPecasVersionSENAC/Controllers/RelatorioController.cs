@@ -22,8 +22,11 @@ namespace JRLMotoPecasVersionSENAC.Controllers
 
         public async Task<IActionResult> Relatorio(DateTime? dataInicial, DateTime? dataFinal)
         {
-            var result = await FindByDate(dataInicial,dataFinal);
-            return  View();
+
+            List<Venda> Vendas = await _context.Venda.Where(i => i.DataCompra >= dataInicial && i.DataCompra <= dataFinal).OrderBy(p => p.DataCompra).ToListAsync<Venda>();
+
+            return  View(Vendas);
+
         }
         /*
 
