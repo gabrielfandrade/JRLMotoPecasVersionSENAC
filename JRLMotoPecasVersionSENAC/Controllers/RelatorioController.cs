@@ -40,7 +40,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
 
             Venda venda = await _context.Venda.FindAsync(id);
 
-            venda.Produtos = await _context.ItemVenda.Where(i => i.Id == venda.Id).ToListAsync<ItemVenda>();
+            venda.Produtos = await _context.ItemVenda.Where(i => i.Id == id).Include(p => p.Produto).ToListAsync<ItemVenda>();
 
             return View(venda);
 
