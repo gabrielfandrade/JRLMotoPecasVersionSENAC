@@ -10,14 +10,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JRLMotoPecasVersionSENAC.Migrations
 {
     [DbContext(typeof(JRLMotoPecasVersionSENACContext))]
-    [Migration("20190415233316_ImagemDb")]
-    partial class ImagemDb
+    [Migration("20190609233635_JRLMotoPecas")]
+    partial class JRLMotoPecas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.8-servicing-32085")
+                .HasAnnotation("ProductVersion", "2.1.11-servicing-32099")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -29,21 +29,19 @@ namespace JRLMotoPecasVersionSENAC.Migrations
 
                     b.Property<string>("CPF");
 
-                    b.Property<DateTime>("DataDeNascimento");
-
-                    b.Property<int?>("EnderecoId");
+                    b.Property<DateTime>("DataNascimento");
 
                     b.Property<string>("Nome");
 
                     b.Property<string>("RG");
+
+                    b.Property<string>("Sexo");
 
                     b.Property<string>("Sobrenome");
 
                     b.Property<string>("Telefone");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EnderecoId");
 
                     b.ToTable("Cliente");
                 });
@@ -60,17 +58,17 @@ namespace JRLMotoPecasVersionSENAC.Migrations
 
                     b.Property<string>("Cidade");
 
+                    b.Property<int?>("ClienteId");
+
                     b.Property<string>("Complemento");
 
                     b.Property<string>("Estado");
 
-                    b.Property<int>("Numero");
-
-                    b.Property<string>("Pais");
-
-                    b.Property<string>("Rua");
+                    b.Property<string>("Logradouro");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClienteId");
 
                     b.ToTable("Endereco");
                 });
@@ -83,9 +81,13 @@ namespace JRLMotoPecasVersionSENAC.Migrations
 
                     b.Property<string>("CPF");
 
-                    b.Property<DateTime>("DataDeNascimento");
+                    b.Property<string>("Celular");
+
+                    b.Property<DateTime>("DataNascimento");
 
                     b.Property<string>("Email");
+
+                    b.Property<int?>("EnderecoId");
 
                     b.Property<string>("Nome");
 
@@ -97,7 +99,30 @@ namespace JRLMotoPecasVersionSENAC.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EnderecoId");
+
                     b.ToTable("Funcionario");
+                });
+
+            modelBuilder.Entity("JRLMotoPecasVersionSENAC.Models.ItemVenda", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("IdProdutoId");
+
+                    b.Property<int?>("IdVendaId");
+
+                    b.Property<int>("Quantidade");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdProdutoId");
+
+                    b.HasIndex("IdVendaId");
+
+                    b.ToTable("ItemVenda");
                 });
 
             modelBuilder.Entity("JRLMotoPecasVersionSENAC.Models.Produto", b =>
@@ -106,7 +131,11 @@ namespace JRLMotoPecasVersionSENAC.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Categoria");
+                    b.Property<string>("Categoria");
+
+                    b.Property<string>("Cor");
+
+                    b.Property<DateTime?>("DataEntrada");
 
                     b.Property<string>("Descricao");
 
@@ -118,26 +147,11 @@ namespace JRLMotoPecasVersionSENAC.Migrations
 
                     b.Property<double>("Preco");
 
+                    b.Property<string>("Tamanho");
+
                     b.HasKey("Id");
 
                     b.ToTable("Produto");
-                });
-
-            modelBuilder.Entity("JRLMotoPecasVersionSENAC.Models.Transportadora", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CNPJ");
-
-                    b.Property<double>("Entrega");
-
-                    b.Property<string>("Nome");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Transportadora");
                 });
 
             modelBuilder.Entity("JRLMotoPecasVersionSENAC.Models.Venda", b =>
@@ -148,26 +162,50 @@ namespace JRLMotoPecasVersionSENAC.Migrations
 
                     b.Property<int?>("ClienteId");
 
-                    b.Property<DateTime>("Data");
+                    b.Property<DateTime>("DataCompra");
 
-                    b.Property<double>("TotalVenda");
+                    b.Property<int?>("EntregaId");
 
-                    b.Property<int?>("TransportadoraId");
+                    b.Property<string>("EstadoAtual");
+
+                    b.Property<int>("Numero");
+
+                    b.Property<double>("TotalCompra");
+
+                    b.Property<double>("ValorEntrega");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ClienteId");
 
-                    b.HasIndex("TransportadoraId");
+                    b.HasIndex("EntregaId");
 
                     b.ToTable("Venda");
                 });
 
-            modelBuilder.Entity("JRLMotoPecasVersionSENAC.Models.Cliente", b =>
+            modelBuilder.Entity("JRLMotoPecasVersionSENAC.Models.Endereco", b =>
+                {
+                    b.HasOne("JRLMotoPecasVersionSENAC.Models.Cliente")
+                        .WithMany("Endereco")
+                        .HasForeignKey("ClienteId");
+                });
+
+            modelBuilder.Entity("JRLMotoPecasVersionSENAC.Models.Funcionario", b =>
                 {
                     b.HasOne("JRLMotoPecasVersionSENAC.Models.Endereco", "Endereco")
                         .WithMany()
                         .HasForeignKey("EnderecoId");
+                });
+
+            modelBuilder.Entity("JRLMotoPecasVersionSENAC.Models.ItemVenda", b =>
+                {
+                    b.HasOne("JRLMotoPecasVersionSENAC.Models.Produto", "IdProduto")
+                        .WithMany()
+                        .HasForeignKey("IdProdutoId");
+
+                    b.HasOne("JRLMotoPecasVersionSENAC.Models.Venda", "IdVenda")
+                        .WithMany("Produtos")
+                        .HasForeignKey("IdVendaId");
                 });
 
             modelBuilder.Entity("JRLMotoPecasVersionSENAC.Models.Venda", b =>
@@ -176,9 +214,9 @@ namespace JRLMotoPecasVersionSENAC.Migrations
                         .WithMany()
                         .HasForeignKey("ClienteId");
 
-                    b.HasOne("JRLMotoPecasVersionSENAC.Models.Transportadora", "Transportadora")
+                    b.HasOne("JRLMotoPecasVersionSENAC.Models.Endereco", "Entrega")
                         .WithMany()
-                        .HasForeignKey("TransportadoraId");
+                        .HasForeignKey("EntregaId");
                 });
 #pragma warning restore 612, 618
         }

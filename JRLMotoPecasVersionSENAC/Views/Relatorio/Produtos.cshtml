@@ -1,0 +1,41 @@
+﻿@model JRLMotoPecasVersionSENAC.Models.Venda
+
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+<h2>Lista de Produtos do Pedido @Html.DisplayFor(model => model.Numero)</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Produtos[1].Produto.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produtos[1].Produto.Preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produtos[1].Quantidade)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Produtos) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Produto.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Produto.Preco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-action="Relatorio">Retornar</a>
+</div>

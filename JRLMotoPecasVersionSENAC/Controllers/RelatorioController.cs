@@ -23,19 +23,30 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         public async Task<IActionResult> Relatorio(DateTime? dataInicial, DateTime? dataFinal)
         {
 
-            List<Venda> Vendas = await _context.Venda.Where(i => i.DataCompra >= dataInicial && i.DataCompra <= dataFinal).OrderBy(p => p.DataCompra).ToListAsync<Venda>();
+            List<Venda> Vendas = await _context.Venda.Where(i => i.DataCompra >= dataInicial && i.DataCompra <= dataFinal).Include(c => c.Cliente).OrderBy(p => p.DataCompra).ToListAsync<Venda>();
 
             return  View(Vendas);
 
         }
-        /*
 
-        public async Task<List<Venda>>GerarRelatorio(DateTime dataInicial, DateTime dataFinal, int? pagina, Boolean? gerarPDF)
+
+        public async Task<IActionResult> Produtos(int? id)
         {
-            Task<List<Venda>> Vendas = await _context.Venda.Where(i => i.DataCompra >= dataInicial && i.DataCompra <= dataFinal).OrderBy(p => p.DataCompra).ToListAsync<Venda>();
-            
-            return await Vendas;
-        }*/
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            Venda venda = await _context.Venda.FindAsync(id);
+
+            venda.Produtos = await _context.ItemVenda.Where(i => i.Id == venda.Id).ToListAsync<ItemVenda>();
+
+            return View(venda);
+
+        }
+
+
         /*
         public Task<List<ItemVenda>> Detalhes(int? id)
         {
@@ -62,23 +73,6 @@ namespace JRLMotoPecasVersionSENAC.Controllers
             return View(venda);
         }*/
 
-        public async Task<List<Venda>> FindByDate(DateTime? dataInicial, DateTime? dataFinal)
-        {
-            var result = from Venda in _context.Venda select Venda;
-
-            if (dataInicial.HasValue)
-            {
-                result = result.Where(x => x.DataCompra >= dataInicial.Value);
-            }
-            if (dataFinal.HasValue)
-            {
-                result = result.Where(x => x.DataCompra >= dataFinal.Value);
-            }
-
-
-            return await result.OrderByDescending(x => x.DataCompra).ToListAsync();
-
-        }
 
     }
 }

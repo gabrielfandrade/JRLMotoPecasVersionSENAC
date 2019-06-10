@@ -345,3 +345,4 @@ C:\Users\Pichau\Source\Repos\gabrielfandrade\JRLMotoPecasVersionSENAC\JRLMotoPec
 C:\Users\Pichau\Source\Repos\gabrielfandrade\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.dll
 C:\Users\Pichau\Source\Repos\gabrielfandrade\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.pdb
 C:\Users\Pichau\Source\Repos\gabrielfandrade\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.csproj.CopyComplete
+C:\Users\Pichau\Source\Repos\gabrielfandrade\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\Razor\Views\Relatorio\Produtos.g.cshtml.cs

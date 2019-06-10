@@ -21,7 +21,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         // GET: Vendas
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Venda.ToListAsync());
+            return View(await _context.Venda.Include(c => c.Cliente).ToListAsync());
         }
 
         // GET: Vendas/Details/5
