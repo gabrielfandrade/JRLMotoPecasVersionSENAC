@@ -4,64 +4,74 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+</head>
+<h2>Detalhes</h2>
+<hr />
 
-<div>
-    <h4>Funcionario</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Sobrenome)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Sobrenome)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.DataNascimento)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.DataNascimento)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.CPF)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.CPF)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.RG)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.RG)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Telefone)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Telefone)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Celular)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Celular)
-        </dd>
-        
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="container">
+    <div class="row">
+      
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">@Html.DisplayFor(model => model.Nome)<span> @Html.DisplayFor(model => model.Sobrenome)</span></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                      
+                        <div class=" col-md-9 col-lg-12 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                    <tr>
+                                        <td>Departamento</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data de Nascimento</td>
+                                        <td>@Html.DisplayFor(model => model.DataNascimento)</td>
+                                    </tr>
+
+                                    <tr>
+                                    <tr>
+                                        <td>CPF</td>
+                                        <td>@Html.DisplayFor(model => model.CPF)</td>
+                                    </tr>
+                                      <tr>
+                                        <td>RG</td>
+                                        <td>@Html.DisplayFor(model => model.RG)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td> @Html.DisplayFor(model => model.Email)</td>
+                                    </tr>
+                                <td>Telefones</td>
+                                <td>
+                                    @Html.DisplayFor(model => model.Telefone)<br />@Html.DisplayFor(model => model.Celular)
+                                </td>
+
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                    <span class="pull-right">
+                        <a a asp-action="Edit" asp-route-id="@Model.Id" data-original-title="Editar Usuário" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+                        <a a asp-action="Index" data-original-title="Voltar a lista" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>

@@ -23,6 +23,14 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         public async Task<IActionResult> Relatorio(DateTime? dataInicial, DateTime? dataFinal)
         {
 
+            if (!dataInicial.HasValue) {
+                dataInicial = new DateTime(DateTime.Now.Year, 1, 1);
+            }
+            if (!dataFinal.HasValue) {
+                dataFinal = DateTime.Now;
+            }
+            ViewData["dataInicial"] = dataInicial.Value.ToString("yyy-MM-dd");
+            ViewData["dataFinal"] = dataFinal.Value.ToString("yyy-MM-dd");
             List<Venda> Vendas = await _context.Venda.Where(i => i.DataCompra >= dataInicial && i.DataCompra <= dataFinal).OrderBy(p => p.DataCompra).ToListAsync<Venda>();
 
             return  View(Vendas);

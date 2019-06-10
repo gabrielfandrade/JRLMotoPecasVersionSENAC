@@ -13,12 +13,12 @@
             <div class="form-group">
                 <label for="dataInicial" class="col-sm-2 control-label">Data Inicial:</label>
                 <div class="col-sm-2">
-                    <input type="date" class="form-control"  name="dataInicial" >
+                    <input type="date" class="form-control"  name="dataInicial" value=@ViewData["dataInicial"]>
                 </div>
             
                 <label for="dataFinal" class="col-sm-2 control-label">Data Final</label>
                 <div class="col-sm-2">
-                    <input type="date" class="form-control"  name="dataFinal" >
+                    <input type="date" class="form-control"  name="dataFinal" value=@ViewData["dataFinal"]>
                 </div>
                 <div class="col-sm-offset-2 col-sm-2">
                     <button type="submit" class="btn btn-default">Gerar Relatório</button>
@@ -32,7 +32,7 @@
     <thead>
         <tr>
             <th>@Html.DisplayNameFor(model => model.Numero)</th>
-            <th>@Html.DisplayNameFor(model => model.Cliente.Nome)</th>
+            <th>@Html.DisplayNameFor(model => model.Cliente.Id)</th>
             <th>@Html.DisplayNameFor(model => model.DataCompra)</th>
             <th>@Html.DisplayNameFor(model => model.TotalCompra)</th>
             <th>@Html.DisplayNameFor(model => model.EstadoAtual)</th>
@@ -47,7 +47,7 @@
                 {
                     <tr>
                         <td>@Html.DisplayFor(modelItem => item.Numero)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Cliente.Nome)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Cliente)</td>
                         <td>@Html.DisplayFor(modelItem => item.DataCompra)</td>
                         <td>@Html.DisplayFor(modelItem => item.TotalCompra)</td>
                         <td>@Html.DisplayFor(modelItem => item.EstadoAtual)</td>
