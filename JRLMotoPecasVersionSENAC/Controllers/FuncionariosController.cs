@@ -53,7 +53,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Sobrenome,DataDeNascimento,CPF,RG,Email,Telefone,Celular")] Funcionario funcionario)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Sobrenome,Departamento,DataDeNascimento,CPF,RG,Email,Telefone,Celular")] Funcionario funcionario)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Sobrenome,DataDeNascimento,CPF,RG,Email,Telefone,Celular")] Funcionario funcionario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Sobrenome,Departamento,DataDeNascimento,CPF,RG,Email,Telefone,Celular")] Funcionario funcionario)
         {
             if (id != funcionario.Id)
             {

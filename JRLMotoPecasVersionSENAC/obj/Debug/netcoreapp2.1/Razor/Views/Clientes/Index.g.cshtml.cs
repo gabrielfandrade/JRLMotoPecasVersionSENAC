@@ -198,7 +198,7 @@ using JRLMotoPecasVersionSENAC.Models;
             WriteLiteral("\r\n                                </td>\r\n                                <td>\r\n                                    ");
             EndContext();
             BeginContext(2586, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e0f6a8abaf6e4e87934f021e31ccc888", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c727cab7986c4a67933add6f33bbf87a", async() => {
                 BeginContext(2665, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -234,7 +234,7 @@ using JRLMotoPecasVersionSENAC.Models;
             WriteLiteral(" |\r\n                                    ");
             EndContext();
             BeginContext(2715, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0b08c80480634004b29e14c5ef507577", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ecfc8dacf7eb4a058ebeacf12467b088", async() => {
                 BeginContext(2794, 8, true);
                 WriteLiteral("Detalhes");
                 EndContext();
@@ -270,7 +270,7 @@ using JRLMotoPecasVersionSENAC.Models;
             WriteLiteral(" |\r\n                                    ");
             EndContext();
             BeginContext(2846, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "baa3a77d5a2e4772aecc9393d46c4ae4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bae5634f3f6b4721bbfa85b0dbf10db8", async() => {
                 BeginContext(2926, 7, true);
                 WriteLiteral("Excluir");
                 EndContext();
