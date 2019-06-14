@@ -356,7 +356,6 @@ D:\Projetos\GITHUB\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\n
 D:\Projetos\GITHUB\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.csproj.CoreCompileInputs.cache
 D:\Projetos\GITHUB\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.RazorAssemblyInfo.cache
 D:\Projetos\GITHUB\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.RazorAssemblyInfo.cs
-D:\Projetos\GITHUB\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 D:\Projetos\GITHUB\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.AssemblyInfoInputs.cache
 D:\Projetos\GITHUB\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.AssemblyInfo.cs
 D:\Projetos\GITHUB\JRLMotoPecasVersionSENAC\JRLMotoPecasVersionSENAC\obj\Debug\netcoreapp2.1\JRLMotoPecasVersionSENAC.TagHelpers.input.cache

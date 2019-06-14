@@ -254,7 +254,7 @@ WriteAttributeValue("", 1668, Url.Action("Imagem", "Produtoes" ), 1668, 35, fals
     ");
             EndContext();
             BeginContext(1982, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5d82ba1ba41c4cc29489c05f92292454", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "827c78b883894f519f40a06f3977ccba", async() => {
                 BeginContext(2028, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -289,7 +289,7 @@ WriteAttributeValue("", 1668, Url.Action("Imagem", "Produtoes" ), 1668, 35, fals
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(2044, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0aedfca67cdc4e1cb32fcc6a49d0016a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e28dde059744983ae22eee95e47ecbd", async() => {
                 BeginContext(2066, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

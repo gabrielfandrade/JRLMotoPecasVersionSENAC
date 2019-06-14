@@ -35,17 +35,19 @@ namespace JRLMotoPecasVersionSENAC
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<JRLMotoPecasVersionSENACContext>(options => options.UseMySql(Configuration.GetConnectionString("JRLMotoPecasVersionSENACContext")));
+           //CRIAR BANCO CADO NECESSARIO
+            //builder =>
+            //builder.MigrationsAssembly("SalesWebMvc")));
+
+
+
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddDbContext<JRLMotoPecasVersionSENACContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("JRLMotoPecasVersionSENACContext")));
-
+      
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

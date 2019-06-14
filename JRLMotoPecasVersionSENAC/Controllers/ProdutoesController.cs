@@ -27,7 +27,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         }
 
         // GET: Produtoes/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(long? id)
         {
             if (id == null)
             {
@@ -76,7 +76,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         }
 
         // GET: Produtoes/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(long? id)
         {
             if (id == null)
             {
@@ -96,7 +96,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Produto produto, IFormFile Imagem)
+        public async Task<IActionResult> Edit(long id, Produto produto, IFormFile Imagem)
         {
             if (id != produto.Id)
             {
@@ -135,7 +135,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         }
 
         // GET: Produtoes/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(long? id)
         {
             if (id == null)
             {
@@ -155,7 +155,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
         // POST: Produtoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(long id)
         {
             var produto = await _context.Produto.FindAsync(id);
             _context.Produto.Remove(produto);
@@ -163,7 +163,7 @@ namespace JRLMotoPecasVersionSENAC.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ProdutoExists(int id)
+        private bool ProdutoExists(long id)
         {
             return _context.Produto.Any(e => e.Id == id);
         }

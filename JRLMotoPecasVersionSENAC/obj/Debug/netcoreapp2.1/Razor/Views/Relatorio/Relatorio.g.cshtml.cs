@@ -66,7 +66,7 @@ using JRLMotoPecasVersionSENAC.Models;
             WriteLiteral("\r\n<div class=\"panel panel-default\">\r\n    <div class=\"panel-heading\">\r\n        <h2>Relatório</h2>\r\n    </div>\r\n    <div class=\"panel-body\">\r\n        ");
             EndContext();
             BeginContext(254, 855, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "64254a7b778d4f3c82dfec3d737f81ea", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19cc36930bd547f694c175cc957c364e", async() => {
                 BeginContext(313, 254, true);
                 WriteLiteral("\r\n            <div class=\"form-group\">\r\n                <label for=\"dataInicial\" class=\"col-sm-2 control-label\">Data Inicial:</label>\r\n                <div class=\"col-sm-2\">\r\n                    <input type=\"date\" class=\"form-control\"  name=\"dataInicial\"");
                 EndContext();

@@ -71,7 +71,7 @@ using JRLMotoPecasVersionSENAC.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(99, 354, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf5776bc7976410f8f30a9133294d8d5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b1f29e4521b0445daf94c7648e44149d", async() => {
                 BeginContext(105, 341, true);
                 WriteLiteral(@"
     <link href=""//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"" rel=""stylesheet"" id=""bootstrap-css"">
@@ -221,7 +221,7 @@ using JRLMotoPecasVersionSENAC.Models;
                         ");
             EndContext();
             BeginContext(3192, 196, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6912b1852fa44b5394957e432fdcfcaa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "518ebc8bff2f4797a24f3216b5051da3", async() => {
                 BeginContext(3344, 40, true);
                 WriteLiteral("<i class=\"glyphicon glyphicon-edit\"></i>");
                 EndContext();
@@ -263,7 +263,7 @@ using JRLMotoPecasVersionSENAC.Models;
             WriteLiteral("\r\n                        ");
             EndContext();
             BeginContext(3414, 173, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd5aff2155964c2fbde8d34a16abc2e7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e3cb68b3c62646dabb135f259c929aa9", async() => {
                 BeginContext(3541, 42, true);
                 WriteLiteral("<i class=\"glyphicon glyphicon-remove\"></i>");
                 EndContext();

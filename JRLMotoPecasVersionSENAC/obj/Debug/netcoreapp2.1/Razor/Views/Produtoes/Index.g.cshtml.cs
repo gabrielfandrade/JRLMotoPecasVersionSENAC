@@ -83,7 +83,7 @@ using JRLMotoPecasVersionSENAC.Models;
                         ");
             EndContext();
             BeginContext(562, 129, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a0f7433697c34accaeaa584caab88ebe", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8f26f686e6d7427490af608d7993391c", async() => {
                 BeginContext(619, 68, true);
                 WriteLiteral("\r\n                            Novo Produto\r\n                        ");
                 EndContext();
@@ -207,7 +207,7 @@ using JRLMotoPecasVersionSENAC.Models;
             WriteLiteral("\r\n                                </td>\r\n                                <td>\r\n                                    ");
             EndContext();
             BeginContext(2496, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a4443893547b44fe98294d84588790be", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2bac0473e29f4316987fa662cb8c62bc", async() => {
                 BeginContext(2575, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -243,7 +243,7 @@ using JRLMotoPecasVersionSENAC.Models;
             WriteLiteral(" |\r\n                                    ");
             EndContext();
             BeginContext(2625, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40f3c1dbb2994d1690628e19c4081aac", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d5bea57e4a9488e98063b3fbc28ce79", async() => {
                 BeginContext(2704, 8, true);
                 WriteLiteral("Detalhes");
                 EndContext();
@@ -279,7 +279,7 @@ using JRLMotoPecasVersionSENAC.Models;
             WriteLiteral(" |\r\n                                    ");
             EndContext();
             BeginContext(2756, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7d8af64be2294aa2bf665abd84cce7ee", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "527ca02bf7e049ccbe55fb8b9265404f", async() => {
                 BeginContext(2836, 7, true);
                 WriteLiteral("Excluir");
                 EndContext();

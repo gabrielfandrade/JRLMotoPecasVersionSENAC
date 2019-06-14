@@ -3,65 +3,84 @@
 @{
     ViewData["Title"] = "Create";
 }
+<head>
 
-<h2>Create</h2>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+</head>
 
-<h4>Produto</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create" method="post" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
-                <input type="text" asp-for="Descricao" class="form-control" />
-                <span asp-validation-for="Descricao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Categoria" class="control-label"></label>
-                <select asp-for="Categoria" asp-items="Html.GetEnumSelectList<Categoria>()">
-                    <option selected="selected" value="">Please select</option>
-                </select>
-                <span asp-validation-for="Categoria" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Estoque" class="control-label"></label>
-                <input asp-for="Estoque" class="form-control" />
-                <span asp-validation-for="Estoque" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Preco" class="control-label"></label>
-                <input asp-for="Preco" class="form-control" />
-                <span asp-validation-for="Preco" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Imagem" class="control-label"></label>
-                <input type="file" id="files" asp-for="Imagem" />
-            </div>
-            <div class="form-group">
-                <label asp-for="Tamanho" class="control-label"></label>
-                <input asp-for="Tamanho" class="form-control" />
-                <span asp-validation-for="Tamanho" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Cor" class="control-label"></label>
-                <input asp-for="Cor" class="form-control" />
-                <span asp-validation-for="Cor" class="text-danger"></span>
-            </div>                
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <h2>Cadastrar Produto</h2>
+                <hr class="colorgraph">
+                <div class="row">
+
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input asp-for="Nome" type="text" name="Nome" id="Nome" class="form-control input-lg" placeholder="Nome" tabindex="1">
+                            <span asp-validation-for="Nome" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                            <textarea asp-for="Descricao" class="form-control" id="Descricao" placeholder="Descrição" tabindex="2" rows="3"></textarea>
+                            <span asp-validation-for="Descricao" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Categoria" class="control-label"></label>
+                    <select asp-for="Categoria" asp-items="Html.GetEnumSelectList<Categoria>() ">
+                     <option selected="selected" value="" >Por favor, selecione um valor</option>
+                    </select>
+                    <span asp-validation-for="Categoria" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="Estoque" class="form-control" placeholder="Quantidade" tabindex="4" />
+                    <span asp-validation-for="Estoque" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="Preco" class="form-control" placeholder="Preço" tabindex="5"/>
+                    <span asp-validation-for="Preco" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Imagem" class="control-label"></label>
+                    <input type="file" id="files" asp-for="Imagem" tabindex="6" />
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="Tamanho" class="form-control" placeholder="Tamanho" tabindex="7" />
+                    <span asp-validation-for="Tamanho" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="Cor" class="form-control" placeholder="Cor" tabindex="8"/>
+                    <span asp-validation-for="Cor" class="text-danger"></span>
+                </div>
+        </div>
+
+
+        <hr class="colorgraph">
+
+        <div class="row">
+
+            <div class="col-xs-5 col-md-4"><a asp-action="Index" class="btn btn-primary btn-block btn-lg" tabindex="9">Cancelar</a></div>
+            <div class="col-xs-5 col-md-4"><input type="submit" value="Create" class="btn btn-success btn-block btn-lg" /></div>
+
+        </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

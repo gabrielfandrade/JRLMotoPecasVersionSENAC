@@ -7,7 +7,7 @@ namespace JRLMotoPecasVersionSENAC.Models
 {
     public class Produto
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public string Categoria { get; set; }
@@ -23,7 +23,7 @@ namespace JRLMotoPecasVersionSENAC.Models
             DataEntrada = DateTime.Now;
         }
 
-        public Produto(int id, string nome, string descricao, string categoria, int estoque, double preco, byte[] imagem, string tamanho, string cor)
+        public Produto(long id, string nome, string descricao, string categoria, int estoque, double preco, byte[] imagem, string tamanho, string cor)
         {
             Id = id;
             Nome = nome;

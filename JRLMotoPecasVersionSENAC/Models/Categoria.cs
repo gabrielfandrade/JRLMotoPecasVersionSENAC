@@ -9,7 +9,7 @@ namespace JRLMotoPecasVersionSENAC.Models
     {
         Traseira,
         Frontal,
-        Dianteira,
+        Central,
         Acessorio
     }
 }
